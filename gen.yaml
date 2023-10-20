@@ -1,0 +1,15 @@
+configVersion: 1.0.0
+generation:
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
+  baseServerURL: ""
+  sdkClassName: Swagger-Petstore---OpenAPI-3.0
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+typescript:
+  version: 0.0.1
+  author: Ritza
+  clientServerStatusCodesAsErrors: true
+  maxMethodParams: 0
+  packageName: Swagger-Petstore---OpenAPI-3.0
