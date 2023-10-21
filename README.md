@@ -7,15 +7,15 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/Ritza-sample-sdk
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/Ritza-sample-sdk
@@ -24,8 +24,6 @@ yarn add https://github.com/speakeasy-sdks/Ritza-sample-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
@@ -55,10 +53,10 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
 
-## [pet](docs/sdks/pet/README.md)
+### [pet](docs/sdks/pet/README.md)
 
 * [addPetForm](docs/sdks/pet/README.md#addpetform) - Add a new pet to the store
 * [addPetJson](docs/sdks/pet/README.md#addpetjson) - Add a new pet to the store
@@ -73,7 +71,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 * [updatePetRaw](docs/sdks/pet/README.md#updatepetraw) - Update an existing pet
 * [uploadFile](docs/sdks/pet/README.md#uploadfile) - uploads an image
 
-## [store](docs/sdks/store/README.md)
+### [store](docs/sdks/store/README.md)
 
 * [deleteOrder](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 * [getInventory](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
@@ -82,7 +80,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 * [placeOrderJson](docs/sdks/store/README.md#placeorderjson) - Place an order for a pet
 * [placeOrderRaw](docs/sdks/store/README.md#placeorderraw) - Place an order for a pet
 
-## [user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [createUserForm](docs/sdks/user/README.md#createuserform) - Create user
 * [createUserJson](docs/sdks/user/README.md#createuserjson) - Create user
@@ -98,8 +96,6 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

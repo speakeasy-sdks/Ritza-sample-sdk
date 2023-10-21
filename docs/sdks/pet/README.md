@@ -253,7 +253,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
   const res = await sdk.pet.findPetsByTags({
     tags: [
-      "engage",
+      "string",
     ],
   });
 
