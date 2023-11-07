@@ -1,5 +1,5 @@
 # Store
-(*store*)
+(*.store*)
 
 ## Overview
 
@@ -33,6 +33,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   const res = await sdk.store.deleteOrder({
     orderId: 127902,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -68,6 +69,7 @@ import { GetInventorySecurity } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/mo
 const operationSecurity: GetInventorySecurity = "";
 
   const res = await sdk.store.getInventory(operationSecurity);
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -106,6 +108,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     orderId: 614993,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -133,7 +136,7 @@ Place a new order in the store
 
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
-import { OrderStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
+import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new SwaggerPetstoreOpenApi30({
@@ -144,8 +147,9 @@ import { OrderStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shar
     id: 10,
     petId: 198772,
     quantity: 7,
-    status: OrderStatus.Approved,
+    status: Status.Approved,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -174,7 +178,7 @@ Place a new order in the store
 
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
-import { OrderStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
+import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new SwaggerPetstoreOpenApi30({
@@ -185,8 +189,9 @@ import { OrderStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shar
     id: 10,
     petId: 198772,
     quantity: 7,
-    status: OrderStatus.Approved,
+    status: Status.Approved,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -215,14 +220,15 @@ Place a new order in the store
 
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
-import { OrderStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
+import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new SwaggerPetstoreOpenApi30({
     petstoreAuth: "",
   });
 
-  const res = await sdk.store.placeOrderRaw("UlJXn(4[x^" as bytes <<<>>>);
+  const res = await sdk.store.placeOrderRaw(new TextEncoder().encode("0xcB9dC14dEe"));
+
 
   if (res.statusCode == 200) {
     // handle response

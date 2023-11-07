@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ## Overview
 
@@ -43,6 +43,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     userStatus: 1,
     username: "theUser",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -88,6 +89,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     username: "theUser",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -121,7 +123,8 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     petstoreAuth: "",
   });
 
-  const res = await sdk.user.createUserRaw("i5Xui)x^_Y" as bytes <<<>>>);
+  const res = await sdk.user.createUserRaw(new TextEncoder().encode("0xB4dDB1Eeed"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -169,6 +172,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     },
   ]);
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -205,6 +209,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   const res = await sdk.user.deleteUser({
     username: "Demetris_Torphy",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -243,6 +248,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     username: "Zachery_Schneider",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -278,6 +284,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
   const res = await sdk.user.loginUser({});
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -312,6 +319,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   });
 
   const res = await sdk.user.logoutUser();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -358,6 +366,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     },
     username: "Bo_Lynch4",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -406,6 +415,7 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
     username: "Alanna_Waters81",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -440,9 +450,10 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   });
 
   const res = await sdk.user.updateUserRaw({
-    requestBody: "b4q0<\{RD/" as bytes <<<>>>,
+    requestBody: new TextEncoder().encode("0xf4D36eFb83"),
     username: "Eleonore2",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -3,7 +3,7 @@
  */
 
 import * as utils from "../internal/utils";
-import * as shared from "./models/shared";
+import * as shared from "../sdk/models/shared";
 import { Pet } from "./pet";
 import { Store } from "./store";
 import { User } from "./user";
@@ -13,7 +13,7 @@ import { AxiosInstance } from "axios";
 /**
  * Contains the list of servers available to the SDK
  */
-export const ServerList = ["/api/v3"] as const;
+export const ServerList = ["https:///api/v3"] as const;
 
 /**
  * The available configuration options for the SDK
@@ -48,9 +48,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.17";
-    sdkVersion = "0.3.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 0.3.0 2.171.0 1.0.17 Swagger-Petstore---OpenAPI-3.0";
+    sdkVersion = "0.4.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 0.4.0 2.181.1 1.0.17 Swagger-Petstore---OpenAPI-3.0";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
