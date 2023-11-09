@@ -56,7 +56,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 ## Available Resources and Operations
 
 
-### [.pet](docs/sdks/pet/README.md)
+### [pet](docs/sdks/pet/README.md)
 
 * [addPetForm](docs/sdks/pet/README.md#addpetform) - Add a new pet to the store
 * [addPetJson](docs/sdks/pet/README.md#addpetjson) - Add a new pet to the store
@@ -71,7 +71,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 * [updatePetRaw](docs/sdks/pet/README.md#updatepetraw) - Update an existing pet
 * [uploadFile](docs/sdks/pet/README.md#uploadfile) - uploads an image
 
-### [.store](docs/sdks/store/README.md)
+### [store](docs/sdks/store/README.md)
 
 * [deleteOrder](docs/sdks/store/README.md#deleteorder) - Delete purchase order by ID
 * [getInventory](docs/sdks/store/README.md#getinventory) - Returns pet inventories by status
@@ -80,7 +80,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 * [placeOrderJson](docs/sdks/store/README.md#placeorderjson) - Place an order for a pet
 * [placeOrderRaw](docs/sdks/store/README.md#placeorderraw) - Place an order for a pet
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [createUserForm](docs/sdks/user/README.md#createuserform) - Create user
 * [createUserJson](docs/sdks/user/README.md#createuserjson) - Create user
@@ -159,44 +159,38 @@ If you'd like to override the default retry strategy for all operations that sup
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
-  const sdk = new SwaggerPetstoreOpenApi30({
-    retry_config: {
-        strategy: "backoff",
-        backoff: {
-          initialInterval: 1,
-          maxInterval: 50,
-          exponent: 1.1,
-          maxElapsedTime: 100,
+(async () => {
+    const sdk = new SwaggerPetstoreOpenApi30({
+        retry_config: {
+            strategy: "backoff",
+            backoff: {
+                initialInterval: 1,
+                maxInterval: 50,
+                exponent: 1.1,
+                maxElapsedTime: 100,
+            },
+            retryConnectionErrors: false,
         },
-        retryConnectionErrors: false,
-      }
-    petstoreAuth: "",
-  });
+        petstoreAuth: "",
+    });
 
-  const res = await sdk.pet.addPetForm({
-    category: {
-      id: 1,
-      name: "Dogs",
-    },
-    id: 10,
-    name: "doggie",
-    photoUrls: [
-      "http://celebrated-surprise.org",
-    ],
-    tags: [
-      {},
-    ],
-  });
+    const res = await sdk.pet.addPetForm({
+        category: {
+            id: 1,
+            name: "Dogs",
+        },
+        id: 10,
+        name: "doggie",
+        photoUrls: ["http://celebrated-surprise.org"],
+        tags: [{}],
+    });
 
-
-  if (res.statusCode == 200) {
-    // handle response
-  }
+    if (res.statusCode == 200) {
+        // handle response
+    }
 })();
+
 ```
-
-
 <!-- End Retries -->
 
 
@@ -204,9 +198,44 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 
+## Example
+
+```typescript
+import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
+import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
+
+(async () => {
+    const sdk = new SwaggerPetstoreOpenApi30({
+        petstoreAuth: "",
+    });
+
+    let res;
+    try {
+        res = await sdk.pet.addPetForm({
+            category: {
+                id: 1,
+                name: "Dogs",
+            },
+            id: 10,
+            name: "doggie",
+            photoUrls: ["http://celebrated-surprise.org"],
+            tags: [{}],
+        });
+    } catch (e) {}
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
 <!-- End Error Handling -->
 
 
@@ -307,19 +336,16 @@ const httpClient = axios.create({
 
 const sdk = new SwaggerPetstoreOpenApi30({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 
 
 <!-- Start Authentication -->
-
 # Authentication
 
 ## Per-Client Security Schemes
 
-Your SDK supports the following security scheme globally:
+This SDK supports the following security scheme globally:
 
 | Name           | Type           | Scheme         |
 | -------------- | -------------- | -------------- |
@@ -356,7 +382,7 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
 
 ## Per-Operation Security Schemes
 
-Some operations in your SDK require the security scheme to be specified at the request level. For example:
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
 
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";

@@ -44,7 +44,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -61,7 +61,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -109,7 +109,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/store/inventory";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/store/inventory";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetInventorySecurity(security);
@@ -122,7 +122,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -186,7 +186,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/store/order/{orderId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -207,7 +207,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -274,7 +274,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/store/order";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/store/order";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -305,7 +305,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -370,7 +370,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/store/order";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/store/order";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -401,7 +401,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -462,7 +462,7 @@ export class Store {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/store/order";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/store/order";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -493,7 +493,7 @@ export class Store {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",

@@ -86,7 +86,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -136,7 +136,7 @@ export class Pet {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -206,7 +206,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -256,7 +256,7 @@ export class Pet {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -322,7 +322,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -372,7 +372,7 @@ export class Pet {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url,
+                url: operationUrl,
                 method: "post",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -437,7 +437,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pet/{petId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pet/{petId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -458,7 +458,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -511,7 +511,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet/findByStatus";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet/findByStatus";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -547,7 +547,7 @@ export class Pet {
         const httpRes: AxiosResponse = await utils.Retry(() => {
             return client.request({
                 validateStatus: () => true,
-                url: url + queryParams,
+                url: operationUrl + queryParams,
                 method: "get",
                 headers: headers,
                 responseType: "arraybuffer",
@@ -621,7 +621,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet/findByTags";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet/findByTags";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -643,7 +643,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -717,7 +717,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pet/{petId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pet/{petId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         if (!(security instanceof utils.SpeakeasyBase)) {
             security = new operations.GetPetByIdSecurity(security);
@@ -734,7 +734,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -798,7 +798,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pet/{petId}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pet/{petId}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -816,7 +816,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -868,7 +868,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -904,7 +904,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -974,7 +974,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1010,7 +1010,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -1076,7 +1076,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pet";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pet";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1112,7 +1112,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -1178,7 +1178,7 @@ export class Pet {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pet/{petId}/uploadImage", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pet/{petId}/uploadImage", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -1210,7 +1210,7 @@ export class Pet {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url + queryParams,
+            url: operationUrl + queryParams,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
