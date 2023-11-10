@@ -111,7 +111,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -119,7 +119,7 @@ export class User {
 
         const res: operations.CreateUserFormResponse = new operations.CreateUserFormResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
@@ -133,13 +133,13 @@ export class User {
                     httpRes
                 );
             default:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -213,7 +213,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -221,7 +221,7 @@ export class User {
 
         const res: operations.CreateUserJsonResponse = new operations.CreateUserJsonResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
@@ -235,13 +235,13 @@ export class User {
                     httpRes
                 );
             default:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -311,7 +311,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -319,7 +319,7 @@ export class User {
 
         const res: operations.CreateUserRawResponse = new operations.CreateUserRawResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
@@ -333,13 +333,13 @@ export class User {
                     httpRes
                 );
             default:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -409,7 +409,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -418,19 +418,19 @@ export class User {
         const res: operations.CreateUsersWithListInputResponse =
             new operations.CreateUsersWithListInputResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -494,7 +494,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -502,7 +502,7 @@ export class User {
 
         const res: operations.DeleteUserResponse = new operations.DeleteUserResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -565,7 +565,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -573,19 +573,19 @@ export class User {
 
         const res: operations.GetUserByNameResponse = new operations.GetUserByNameResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -652,7 +652,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -660,20 +660,20 @@ export class User {
 
         const res: operations.LoginUserResponse = new operations.LoginUserResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
             headers: utils.getHeadersFromResponse(httpRes.headers),
         });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.twoHundredApplicationJsonRes = decodedRes;
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.twoHundredApplicationXmlRes = decodedRes;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -726,7 +726,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -734,7 +734,7 @@ export class User {
 
         const res: operations.LogoutUserResponse = new operations.LogoutUserResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -810,7 +810,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -818,7 +818,7 @@ export class User {
 
         const res: operations.UpdateUserFormResponse = new operations.UpdateUserFormResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -894,7 +894,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -902,7 +902,7 @@ export class User {
 
         const res: operations.UpdateUserJsonResponse = new operations.UpdateUserJsonResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -978,7 +978,7 @@ export class User {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -986,7 +986,7 @@ export class User {
 
         const res: operations.UpdateUserRawResponse = new operations.UpdateUserRawResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {

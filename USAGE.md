@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
