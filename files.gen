@@ -60,7 +60,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/addpetformresponse.md
 docs/sdk/models/operations/addpetjsonresponse.md
 docs/sdk/models/operations/addpetrawresponse.md
@@ -121,4 +120,5 @@ docs/internal/utils/retryconfig.md
 docs/sdks/pet/README.md
 docs/sdks/store/README.md
 docs/sdks/user/README.md
+USAGE.md
 .gitattributes

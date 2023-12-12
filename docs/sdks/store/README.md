@@ -25,9 +25,9 @@ For valid response try integer IDs with value < 1000. Anything above 1000 or non
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.store.deleteOrder({
@@ -37,7 +37,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -67,16 +69,18 @@ Returns a map of status codes to quantities
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { GetInventorySecurity } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30();
-const operationSecurity: GetInventorySecurity = "";
+const operationSecurity: GetInventorySecurity = "<YOUR_API_KEY_HERE>";
 
   const res = await sdk.store.getInventory(operationSecurity);
 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -105,9 +109,9 @@ For valid response try integer IDs with value <= 5 or > 10. Other values will ge
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.store.getOrderById({
@@ -117,7 +121,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -147,9 +153,9 @@ Place a new order in the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.store.placeOrderForm({
@@ -162,7 +168,9 @@ import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -192,9 +200,9 @@ Place a new order in the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.store.placeOrderJson({
@@ -207,7 +215,9 @@ import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -237,9 +247,9 @@ Place a new order in the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.store.placeOrderRaw(new TextEncoder().encode("0xcB9dC14dEe"));
@@ -247,7 +257,9 @@ import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

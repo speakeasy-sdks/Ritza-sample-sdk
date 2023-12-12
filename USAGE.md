@@ -1,11 +1,11 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async () => {
+async function run() {
     const sdk = new SwaggerPetstoreOpenApi30({
-        petstoreAuth: "",
+        petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
     });
 
     const res = await sdk.pet.addPetForm({
@@ -22,7 +22,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

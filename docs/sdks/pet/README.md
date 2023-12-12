@@ -32,9 +32,9 @@ Add a new pet to the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.addPetForm({
@@ -55,7 +55,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -86,9 +88,9 @@ Add a new pet to the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.addPetJson({
@@ -109,7 +111,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -140,9 +144,9 @@ Add a new pet to the store
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.addPetRaw(new TextEncoder().encode("0xcf5E85CDde"));
@@ -150,7 +154,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -180,9 +186,9 @@ Deletes a pet
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.deletePet({
@@ -192,7 +198,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -222,9 +230,9 @@ Multiple status values can be provided with comma separated strings
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.findPetsByStatus({
@@ -236,7 +244,9 @@ import { Status } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/operation
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -266,9 +276,9 @@ Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.findPetsByTags({
@@ -280,7 +290,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -310,10 +322,10 @@ Returns a single pet
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { GetPetByIdSecurity } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30();
 const operationSecurity: GetPetByIdSecurity = {
-  apiKey: "",
+  apiKey: "<YOUR_API_KEY_HERE>",
 };
 
   const res = await sdk.pet.getPetById({
@@ -323,7 +335,9 @@ const operationSecurity: GetPetByIdSecurity = {
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -353,9 +367,9 @@ Updates a pet in the store with form data
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.updatePetWithForm({
@@ -365,7 +379,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -395,9 +411,9 @@ Update an existing pet by Id
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.updatePetForm({
@@ -418,7 +434,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -448,9 +466,9 @@ Update an existing pet by Id
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.updatePetJson({
@@ -471,7 +489,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -501,9 +521,9 @@ Update an existing pet by Id
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.updatePetRaw(new TextEncoder().encode("0x6bCA76De67"));
@@ -511,7 +531,9 @@ import { PetStatus } from "Swagger-Petstore---OpenAPI-3.0/dist/sdk/models/shared
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -540,9 +562,9 @@ uploads an image
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.pet.uploadFile({
@@ -553,7 +575,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

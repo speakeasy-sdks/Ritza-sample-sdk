@@ -28,9 +28,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.createUserForm({
@@ -47,7 +47,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -76,9 +78,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.createUserJson({
@@ -95,7 +97,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -124,9 +128,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.createUserRaw(new TextEncoder().encode("0xB4dDB1Eeed"));
@@ -134,7 +138,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -163,9 +169,9 @@ Creates list of users with given input array
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.createUsersWithListInput([
@@ -184,7 +190,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -213,9 +221,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.deleteUser({
@@ -225,7 +233,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -254,9 +264,9 @@ Get user by user name
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.getUserByName({
@@ -266,7 +276,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -295,9 +307,9 @@ Logs user into the system
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.loginUser({});
@@ -305,7 +317,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -334,9 +348,9 @@ Logs out current logged in user session
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.logoutUser();
@@ -344,7 +358,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -372,9 +388,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.updateUserForm({
@@ -394,7 +410,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -423,9 +441,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.updateUserJson({
@@ -445,7 +463,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -474,9 +494,9 @@ This can only be done by the logged in user.
 ```typescript
 import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
 
-(async() => {
+async function run() {
   const sdk = new SwaggerPetstoreOpenApi30({
-    petstoreAuth: "",
+    petstoreAuth: "Bearer <YOUR_ACCESS_TOKEN_HERE>",
   });
 
   const res = await sdk.user.updateUserRaw({
@@ -487,7 +507,9 @@ import { SwaggerPetstoreOpenApi30 } from "Swagger-Petstore---OpenAPI-3.0";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
