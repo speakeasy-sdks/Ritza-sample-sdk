@@ -283,7 +283,7 @@ async function run() {
 
   const res = await sdk.pet.findPetsByTags({
     tags: [
-      "string",
+      "<value>",
     ],
   });
 

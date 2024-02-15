@@ -4,16 +4,16 @@ management:
   docChecksum: 6f8e78241b3ac7453cad86f08258d065
   docVersion: 1.0.17
   speakeasyVersion: internal
-  generationVersion: 2.225.2
-  releaseVersion: 0.5.1
-  configChecksum: eb6eeec3ccb73ebb0335ecfe76c7dbb5
+  generationVersion: 2.258.0
+  releaseVersion: 0.5.2
+  configChecksum: 3f39e2c696c2c2e16f2f7e156875943e
   repoURL: https://github.com/speakeasy-sdks/Ritza-sample-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/Ritza-sample-sdk
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 3.4.1
+    core: 3.4.7
     globalSecurity: 2.82.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.0
